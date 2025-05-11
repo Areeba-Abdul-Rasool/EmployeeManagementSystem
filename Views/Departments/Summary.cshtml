@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EmployeeManagementSystem.Models.DepartmentSummaryViewModel>
+
+@{
+    ViewBag.Title = "Department Summary";
+}
+
+<h2>Department Summary</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Total Employees</th>
+            <th>Average Tenure (Days)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DepartmentName</td>
+                <td>@item.TotalEmployees</td>
+                <td>@(item.AverageTenure.HasValue ? Math.Round(item.AverageTenure.Value, 2).ToString() : "N/A")</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">AREEBA ABDUL RASOOL</h1>
+        <p class="lead text-secondary">Welcome to the Employee Management System (EMS)</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Manage Employees</h5>
+                    <p class="card-text">
+                        Add, update, delete, or view employee records using our centralized dashboard.
+                    </p>
+                    <a href="@Url.Action("Index", "Employees")" class="btn btn-outline-primary">Go to Employees</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Departments Overview</h5>
+                    <p class="card-text">
+                        View department summaries and manage departmental data efficiently.
+                    </p>
+                    <a href="@Url.Action("DepartmentSummary", "Departments")" class="btn btn-outline-success">View Departments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-info">Reports & Analysis</h5>
+                    <p class="card-text">
+                        Generate insightful reports on workforce distribution, salary, and more.
+                    </p>
+                    <a href="@Url.Action("Index", "Reports")" class="btn btn-outline-info">View Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="@Url.Action("Logout", "Account")" class="btn btn-danger">Logout</a>
+    </div>
+</main>
